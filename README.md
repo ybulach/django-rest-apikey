@@ -6,7 +6,7 @@ Add a per-user API key to authenticate in Django REST Framework
 
 Install using pip:
 
-    pip install git+https://github.com/ybulach/django-rest-apikey.git
+    pip install django_rest_apikey
 
 Add 'django_rest_apikey' to `INSTALLED_APPS`:
 
@@ -31,6 +31,9 @@ Additionally, you can add this to your router to allow users to manage there API
     ...
     your_router.register(r'apikeys', APIKeyViewSet, base_name='apikeys')
 
+Also, don't forget to create the new model in the database:
+
+    python manage.py migrate
 
 ### Usage
 
