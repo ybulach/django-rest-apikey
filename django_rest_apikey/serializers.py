@@ -6,3 +6,4 @@ class APIKeySerializer(serializers.ModelSerializer):
 	class Meta:
 		model = models.APIKey
 		fields = ('key', 'created_at')
+		read_only_fields = ('key', 'created_at')
