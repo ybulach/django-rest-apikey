@@ -9,7 +9,7 @@ except ImportError:
 setup(
 	name = 'django_rest_apikey',
 	description = 'Per-user API key to authenticate in Django REST Framework',
-	version = '0.2.0',
+	version = '0.3.0',
 	license = 'LGPL',
 	author = 'Yamine BULACH',
 	author_email = 'contact@yamine-bulach.eu',

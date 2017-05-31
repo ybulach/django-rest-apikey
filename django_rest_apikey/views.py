@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import permissions, viewsets
 
 import models
 import serializers
@@ -8,7 +8,7 @@ class APIKeyViewSet(viewsets.ModelViewSet):
 	serializer_class = serializers.APIKeySerializer
 	lookup_field = 'key'
 	lookup_value_regex = validators.hexadecimal_regex
-	permission_classes = ()
+	permission_classes = (permissions.IsAuthenticated,)
 	filter_backends = ()
 
 	# Only return API keys owned by the user
